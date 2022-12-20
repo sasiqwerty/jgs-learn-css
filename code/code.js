@@ -1,3 +1,4 @@
+// The first three help the inline css to work
 // changes the color of the text
 function userColor() {
   let userColor = document.getElementById("userColor").value;
@@ -13,3 +14,5 @@ function userFont() {
   let userFont = document.getElementById("userFont").value;
   p1.style.fontSize = userFont + "px";
 }
+
+// Code to help the style element
