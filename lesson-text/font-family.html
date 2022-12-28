@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Font Family</title>
     <style>
       p {
         font-size: 2em;
+      }
+      #output {
+        background-color: yellow;
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <h2>Font Families</h2>
     <p>Here we we will learn how to change font families</p>
+    <p id="output">The font name appears here</p>
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse minima eos
       eius eveniet laboriosam velit. Necessitatibus incidunt odio id, soluta
@@ -27,19 +33,39 @@
     <button onclick="fontHelvetica()">Helvetica</button>
     <button onclick="fontCalibri()">Calibri</button>
     <button onclick="fontCambria()">Cambria</button>
+    <button onclick="fontJoker()">Jokerman</button>
+    <button onclick="fontWebdings()">Webdings</button>
     <script>
       function fontImpact() {
         document.body.style.fontFamily = "Impact";
+        let output = document.getElementById("output");
+        output.textContent = "the font family has changed to impact";
       }
       function fontHelvetica() {
         document.body.style.fontFamily = "Helvetica";
+        let output = document.getElementById("output");
+        output.textContent = "the font family has changed to Helvetica";
       }
 
       function fontCalibri() {
         document.body.style.fontFamily = "Calibri";
+        let output = document.getElementById("output");
+        output.textContent = "the font family has changed to Calibri";
       }
       function fontCambria() {
         document.body.style.fontFamily = "Cambria";
+        let output = document.getElementById("output");
+        output.textContent = "the font family has changed to Cambria";
+      }
+      function fontJoker() {
+        document.body.style.fontFamily = "Jokerman";
+        let output = document.getElementById("output");
+        output.textContent = "the font family has changed to Jokerman";
+      }
+      function fontWebdings() {
+        document.body.style.fontFamily = "Webdings";
+        let output = document.getElementById("output");
+        output.textContent = "the font family has changed to Webdings";
       }
     </script>
   </body>
