@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Webpage</title>
+    <style>
+      .buttons {
+        margin: auto;
+      }
+      input,
+      label {
+        font-size: 1em;
+      }
+      .big-text {
+        font-size: 2em;
+      }
+      p,
+      h2,
+      li,
+      h1 {
+        text-align: center;
+      }
+      .create {
+        transition-duration: 0.4s;
+        color: black;
+        font-size: 1.5em;
+        font-family: fira sans;
+        border: none;
+        padding: 0.5em;
+        border-radius: 0.5em;
+      }
+
+      .create:hover {
+        background-color: #4caf50; /* Green */
+        color: white;
+      }
+      #para-c {
+        background-color: lightgreen;
+      }
+      #h2-c {
+        background-color: lightblue;
+      }
+      #reset {
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Create your site</h1>
+    <p><img src="/lesson-text/invert-color-element.png" alt="" /></p>
+    <p class="big-text">
+      <label for="fname">Enter the content of the element</label>
+      <input type="text" id="input-text" name="fname" value="" />
+    </p>
+    <p>
+      <button class="create" id="para-c" onclick="createPara()">
+        Create a para
+      </button>
+      <button class="create" id="h2-c" onclick="createh2()">Create h2</button>
+      <button class="create" id="li-c" onclick="createLiC()">Create li</button>
+      <button class="create" id="reset" onclick="reset()">Reload</button>
+    </p>
+  </body>
+  <script>
+    function createPara() {
+      let inputText = document.getElementById("input-text").value;
+      let para = document.createElement("p");
+      para.innerText = inputText;
+      document.body.appendChild(para);
+    }
+    function createh2() {
+      let inputText = document.getElementById("input-text").value;
+      let h2 = document.createElement("h2");
+      h2.innerText = inputText;
+      document.body.appendChild(h2);
+    }
+    function createLiC() {
+      let inputText = document.getElementById("input-text").value;
+      let li = document.createElement("li");
+      li.innerText = inputText;
+      document.body.appendChild(li);
+    }
+    function reset() {
+      location.reload();
+    }
+  </script>
+</html>
